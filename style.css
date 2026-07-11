@@ -361,3 +361,49 @@ body{
     }
 
 }
+/* ===========================
+   Çimenler
+=========================== */
+
+.grass{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:140px;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.grass span{
+    position:absolute;
+    bottom:-10px;
+    width:4px;
+    height:120px;
+    background:linear-gradient(to top,#145c31,#49d86b);
+    border-radius:10px 10px 0 0;
+    transform-origin:bottom center;
+    animation:grassWind 4s ease-in-out infinite;
+}
+
+.grass span:nth-child(1){left:4%;height:90px;animation-delay:.1s;}
+.grass span:nth-child(2){left:12%;height:120px;animation-delay:.6s;}
+.grass span:nth-child(3){left:20%;height:100px;animation-delay:1.2s;}
+.grass span:nth-child(4){left:28%;height:130px;animation-delay:1.7s;}
+.grass span:nth-child(5){left:36%;height:110px;animation-delay:.8s;}
+.grass span:nth-child(6){left:45%;height:120px;animation-delay:2.1s;}
+.grass span:nth-child(7){left:54%;height:90px;animation-delay:1.5s;}
+.grass span:nth-child(8){left:63%;height:115px;animation-delay:.5s;}
+.grass span:nth-child(9){left:72%;height:100px;animation-delay:2.2s;}
+.grass span:nth-child(10){left:81%;height:125px;animation-delay:1.3s;}
+.grass span:nth-child(11){left:90%;height:95px;animation-delay:.9s;}
+.grass span:nth-child(12){left:96%;height:115px;animation-delay:2.5s;}
+
+@keyframes grassWind{
+    0%,100%{
+        transform:rotate(-4deg);
+    }
+    50%{
+        transform:rotate(4deg);
+    }
+}
